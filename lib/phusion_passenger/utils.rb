@@ -36,6 +36,10 @@ if !defined?(RUBY_ENGINE) || RUBY_ENGINE == "ruby"
 	require 'phusion_passenger/native_support'
 end
 
+if RUBY_VERSION >= "1.9.1"
+  require 'stringio'
+end
+
 module PhusionPassenger
 
 # Utility functions.
